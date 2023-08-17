@@ -10,6 +10,7 @@
   "scripts": {
     "build": "rimraf dist && vue-tsc && vite build",
     "lint": "eslint --fix ./src && stylelint --fix \"**/*.{css,scss,vue}\"",
+    "prepare": "husky install",
     "release": "pnpm lint && changelogen --release --push"
   },
   "files": [
@@ -34,6 +35,8 @@
     "@vitejs/plugin-vue": "^4.3.1",
     "changelogen": "^0.5.4",
     "eslint": "^8.47.0",
+    "husky": "^8.0.3",
+    "nano-staged": "^0.8.0",
     "rimraf": "^5.0.1",
     "stylelint": "^15.10.2",
     "vite": "^4.4.9",
@@ -44,5 +47,9 @@
   },
   "stylelint": {
     "extends": "@lewebsimple/stylelint-config"
+  },
+  "nano-staged": {
+    "*.{js,ts,vue}": "eslint --fix",
+    "*.{css,scss,vue}": "stylelint --fix"
   }
 }
