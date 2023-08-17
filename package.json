@@ -3,7 +3,40 @@
   "version": "0.1.0",
   "author": "Pascal Martineau <pascal@lewebsimple.ca>",
   "license": "MIT",
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "scripts": {
+    "build": "rimraf dist && vue-tsc && vite build",
+    "lint": "eslint --fix ./src && stylelint --fix \"**/*.{css,scss,vue}\""
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "module": "./dist/vue-ui.es.js",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/vue-ui.es.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@lewebsimple/eslint-config": "^0.7.9",
+    "@lewebsimple/stylelint-config": "^0.7.9",
+    "@types/node": "^20.5.0",
+    "@vitejs/plugin-vue": "^4.3.1",
+    "eslint": "^8.47.0",
+    "rimraf": "^5.0.1",
+    "stylelint": "^15.10.2",
+    "vite": "^4.4.9",
+    "vue-tsc": "^1.8.8"
+  },
+  "eslintConfig": {
+    "extends": "@lewebsimple/eslint-config"
+  },
+  "stylelint": {
+    "extends": "@lewebsimple/stylelint-config"
+  }
 }
