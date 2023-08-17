@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.1.2
+
+[compare changes](https://github.com/lewebsimple/vue-ui/compare/v0.1.1...v0.1.2)
+
+### 🚀 Enhancements
+
+- Automatic code formatting on commit ([aeb67ac](https://github.com/lewebsimple/vue-ui/commit/aeb67ac))
+- Initial Tailwind preset ([605d415](https://github.com/lewebsimple/vue-ui/commit/605d415))
+
+### ❤️  Contributors
+
+- Pascal Martineau <pascal@lewebsimple.ca>
+
 ## v0.1.1
 
 
