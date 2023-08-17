@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "author": "Pascal Martineau <pascal@lewebsimple.ca>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lewebsimple/vue-ui.git"
+  },
   "scripts": {
     "build": "rimraf dist && vue-tsc && vite build",
-    "lint": "eslint --fix ./src && stylelint --fix \"**/*.{css,scss,vue}\""
+    "lint": "eslint --fix ./src && stylelint --fix \"**/*.{css,scss,vue}\"",
+    "release": "pnpm lint && changelogen --release --push"
   },
   "files": [
     "src",
@@ -27,6 +32,7 @@
     "@lewebsimple/stylelint-config": "^0.7.9",
     "@types/node": "^20.5.0",
     "@vitejs/plugin-vue": "^4.3.1",
+    "changelogen": "^0.5.4",
     "eslint": "^8.47.0",
     "rimraf": "^5.0.1",
     "stylelint": "^15.10.2",
