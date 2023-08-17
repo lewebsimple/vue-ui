@@ -17,14 +17,9 @@
     "src",
     "dist"
   ],
-  "module": "./dist/vue-ui.es.js",
-  "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/vue-ui.es.js"
-    },
-    "./dist/style.css": "./dist/style.css"
-  },
+  "main": "./dist/vue-ui.cjs",
+  "module": "./dist/vue-ui.mjs",
+  "types": "./dist/types/index.d.ts",
   "dependencies": {
     "@nuxthq/ui": "^2.7.0"
   },

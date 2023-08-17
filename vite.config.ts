@@ -9,8 +9,8 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "./src/index.ts"),
       name: "vue-ui",
-      formats: ["es"],
-      fileName: (format) => `vue-ui.${format}.js`,
+      formats: ["es", "cjs"],
+      fileName: (format) => (format === "cjs" ? "vue-ui.cjs" : "vue-ui.mjs"),
     },
     rollupOptions: {
       external: ["vue"],
