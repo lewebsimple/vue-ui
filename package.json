@@ -25,12 +25,16 @@
     },
     "./dist/style.css": "./dist/style.css"
   },
+  "dependencies": {
+    "@nuxthq/ui": "^2.7.0"
+  },
   "peerDependencies": {
     "vue": "^3.3.4"
   },
   "devDependencies": {
     "@lewebsimple/eslint-config": "^0.7.9",
     "@lewebsimple/stylelint-config": "^0.7.9",
+    "@tailwindcss/forms": "^0.5.4",
     "@types/node": "^20.5.0",
     "@vitejs/plugin-vue": "^4.3.1",
     "changelogen": "^0.5.4",
@@ -39,6 +43,7 @@
     "nano-staged": "^0.8.0",
     "rimraf": "^5.0.1",
     "stylelint": "^15.10.2",
+    "tailwindcss": "^3.3.3",
     "vite": "^4.4.9",
     "vue-tsc": "^1.8.8"
   },
